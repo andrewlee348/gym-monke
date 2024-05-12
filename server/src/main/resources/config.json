@@ -1,0 +1,5 @@
+{
+  "url" : "jdbc:postgresql://bemonke-12722.7tt.cockroachlabs.cloud:26257/defaultdb?sslmode=require&sslrootcert=server/src/main/resources/root.crt",
+  "user" : "andrewlee2002",
+  "pass" : "5CAUBTDqOo2rpEUjiXB8Vw"
+}

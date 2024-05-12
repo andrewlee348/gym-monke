@@ -1,0 +1,75 @@
+á2023-12-01 13:58:52.445 [Test worker @coroutine#1] TRACE i.ktor.client.plugins.HttpPlainText - Adding Accept-Charset=UTF-8 to http:///
+§2023-12-01 13:58:52.476 [DefaultDispatcher-worker-1 @call-context#2] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+}2023-12-01 13:58:52.517 [DefaultDispatcher-worker-1 @call-context#2] INFO  ktor.test - Application started in 0.054 seconds.
+m2023-12-01 13:58:52.554 [DefaultDispatcher-worker-1 @request#2] TRACE io.ktor.routing.Routing - Trace for []
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+8    /(method:GET), segment:0 -> SUCCESS @ /(method:GET)
+P  /get_all_users, segment:0 -> FAILURE "Selector didn't match" @ /get_all_users
+V  /get_user_friends, segment:0 -> FAILURE "Selector didn't match" @ /get_user_friends
+R  /get_user_posts, segment:0 -> FAILURE "Selector didn't match" @ /get_user_posts
+P  /get_user_data, segment:0 -> FAILURE "Selector didn't match" @ /get_user_data
+L  /get_profile, segment:0 -> FAILURE "Selector didn't match" @ /get_profile
+H  /get_posts, segment:0 -> FAILURE "Selector didn't match" @ /get_posts
+L  /banana_post, segment:0 -> FAILURE "Selector didn't match" @ /banana_post
+L  /delete_post, segment:0 -> FAILURE "Selector didn't match" @ /delete_post
+J  /add_friend, segment:0 -> FAILURE "Selector didn't match" @ /add_friend
+P  /remove_friend, segment:0 -> FAILURE "Selector didn't match" @ /remove_friend
+L  /add_comment, segment:0 -> FAILURE "Selector didn't match" @ /add_comment
+R  /delete_comment, segment:0 -> FAILURE "Selector didn't match" @ /delete_comment
+N  /edit_comment, segment:0 -> FAILURE "Selector didn't match" @ /edit_comment
+N  /get_comments, segment:0 -> FAILURE "Selector didn't match" @ /get_comments
+H  /like_post, segment:0 -> FAILURE "Selector didn't match" @ /like_post
+L  /unlike_post, segment:0 -> FAILURE "Selector didn't match" @ /unlike_post
+X  /edit_post_caption, segment:0 -> FAILURE "Selector didn't match" @ /edit_post_caption
+H  /post_post, segment:0 -> FAILURE "Selector didn't match" @ /post_post
+L  /create_user, segment:0 -> FAILURE "Selector didn't match" @ /create_user
+Matched routes:
+$  "" -> "<slash>" -> "(method:GET)"
+Route resolve result:
+  SUCCESS @ /(method:GET)
+í2023-12-01 13:58:52.568 [Test worker @coroutine#1] TRACE i.k.client.plugins.HttpCallValidator - Validating response for request http://localhost/
+ò2023-12-01 13:58:52.568 [Test worker @coroutine#1] TRACE i.k.c.p.DefaultResponseValidation - Skipping default response validation for http://localhost/
+’2023-12-01 13:58:52.663 [Test worker @coroutine#1] TRACE i.k.c.plugins.defaultTransformers - Transformed with default transformers response body for http://localhost/ to class io.ktor.utils.io.core.ByteReadPacket
+S2023-12-01 13:58:54.056 [Test worker] DEBUG Exposed - DROP TABLE IF EXISTS "users"
+Q2023-12-01 13:58:54.089 [Test worker] DEBUG Exposed - DROP TABLE IF EXISTS posts
+¸2023-12-01 13:58:56.220 [Test worker] WARN  Exposed - Keyword identifier used: 'Users'. Case sensitivity may not be kept when quoted by default: 'users'. To keep case sensitivity, opt-in and set 'preserveKeywordCasing' to true in DatabaseConfig block.
+d2023-12-01 13:58:56.224 [Test worker] INFO  Exposed - Preparing create tables statements took 109ms
+·2023-12-01 13:58:56.260 [Test worker] DEBUG Exposed - CREATE TABLE IF NOT EXISTS "users" (userid VARCHAR(100) NOT NULL, username VARCHAR(100) NOT NULL, profilepicurl VARCHAR(100) NOT NULL, friendlist VARCHAR(10000) NOT NULL)
+}2023-12-01 13:58:56.318 [Test worker] DEBUG Exposed - ALTER TABLE "users" ADD CONSTRAINT users_userid_unique UNIQUE (userid)
+d2023-12-01 13:58:56.361 [Test worker] INFO  Exposed - Executing create tables statements took 137ms
+Z2023-12-01 13:58:56.507 [Test worker] INFO  Exposed - Extracting table columns took 145ms
+Y2023-12-01 13:58:56.640 [Test worker] INFO  Exposed - Extracting primary keys took 133ms
+_2023-12-01 13:58:56.760 [Test worker] INFO  Exposed - Extracting column constraints took 119ms
+b2023-12-01 13:58:56.761 [Test worker] INFO  Exposed - Preparing alter table statements took 399ms
+a2023-12-01 13:58:56.788 [Test worker] INFO  Exposed - Executing alter table statements took 27ms
+^2023-12-01 13:58:56.981 [Test worker] INFO  Exposed - Checking mapping consistence took 193ms
+˙2023-12-01 13:58:57.167 [Test worker] WARN  Exposed - Keyword identifier used: 'time'. Case sensitivity may not be kept when quoted by default: 'time'. To keep case sensitivity, opt-in and set 'preserveKeywordCasing' to true in DatabaseConfig block.
+Ç2023-12-01 13:58:57.168 [Test worker] WARN  Exposed - Keyword identifier used: 'comments'. Case sensitivity may not be kept when quoted by default: 'comments'. To keep case sensitivity, opt-in and set 'preserveKeywordCasing' to true in DatabaseConfig block.
+d2023-12-01 13:58:57.169 [Test worker] INFO  Exposed - Preparing create tables statements took 187ms
+’2023-12-01 13:58:57.206 [Test worker] DEBUG Exposed - CREATE TABLE IF NOT EXISTS posts (userid VARCHAR(100) NOT NULL, username VARCHAR(100) NOT NULL, "time" VARCHAR(50) NOT NULL, caption VARCHAR(1000) NOT NULL, imageurl VARCHAR(100) NOT NULL, "userLikedList" VARCHAR(10000) NOT NULL, banana INT NOT NULL, "comments" VARCHAR(10000) NOT NULL)
+à2023-12-01 13:58:57.238 [Test worker] DEBUG Exposed - ALTER TABLE posts ADD CONSTRAINT posts_userid_time_unique UNIQUE (userid, "time")
+d2023-12-01 13:58:57.280 [Test worker] INFO  Exposed - Executing create tables statements took 111ms
+Z2023-12-01 13:58:57.395 [Test worker] INFO  Exposed - Extracting table columns took 114ms
+X2023-12-01 13:58:57.466 [Test worker] INFO  Exposed - Extracting primary keys took 71ms
+_2023-12-01 13:58:57.688 [Test worker] INFO  Exposed - Extracting column constraints took 221ms
+b2023-12-01 13:58:57.689 [Test worker] INFO  Exposed - Preparing alter table statements took 408ms
+a2023-12-01 13:58:57.741 [Test worker] INFO  Exposed - Executing alter table statements took 52ms
+^2023-12-01 13:58:57.996 [Test worker] INFO  Exposed - Checking mapping consistence took 254ms
+ó2023-12-01 13:58:58.739 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, 'dabbing on them haters', '[]', 'https://i.imgur.com/J8XIcEl.jpg', '2023-11-17 13:36:54', '[]', '5721', 'Irene')
+á2023-12-01 13:58:58.789 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, '‚õ∏Ô∏è', '[]', 'https://i.imgur.com/HqCzDN2.jpg', '2023-11-17 13:48:35', '[]', '5721', 'Irene')
+à2023-12-01 13:58:58.819 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, 'pat pat', '[]', 'https://i.imgur.com/jsVMLxv.jpg', '2023-11-17 13:54:04', '[]', '5721', 'Irene')
+Ö2023-12-01 13:58:58.871 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, 'rawr', '[]', 'https://i.imgur.com/IGzRMEB.jpg', '2023-11-17 13:57:20', '[]', '9507', 'Cathy')
+Ö2023-12-01 13:58:58.901 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, 'bruh', '[]', 'https://i.imgur.com/JhKrxQy.jpg', '2023-11-17 13:58:06', '[]', '9507', 'Cathy')
+Ö2023-12-01 13:58:58.931 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, 'huhh', '[]', 'https://i.imgur.com/L5RYdo3.png', '2023-11-17 14:04:32', '[]', '9507', 'Cathy')
+¿2023-12-01 13:58:58.983 [Test worker] DEBUG Exposed - INSERT INTO "users" (friendlist, profilepicurl, userid, username) VALUES ('["5721"]', 'https://i.imgur.com/tqJXoTX.jpg', '9507', 'Cathy')
+¿2023-12-01 13:58:59.014 [Test worker] DEBUG Exposed - INSERT INTO "users" (friendlist, profilepicurl, userid, username) VALUES ('["9507"]', 'https://i.imgur.com/jsqpRBX.jpg', '5721', 'Irene')
+∆2023-12-01 13:58:59.046 [Test worker] DEBUG Exposed - INSERT INTO "users" (friendlist, profilepicurl, userid, username) VALUES ('["5721,9507"]', 'https://i.imgur.com/1Fw0PnL.jpg', '2012', 'Andrew')
+d2023-12-01 13:59:00.392 [Test worker] INFO  Exposed - Preparing create tables statements took 255ms
+c2023-12-01 13:59:00.422 [Test worker] INFO  Exposed - Executing create tables statements took 29ms
+Z2023-12-01 13:59:00.524 [Test worker] INFO  Exposed - Extracting table columns took 102ms
+Y2023-12-01 13:59:00.701 [Test worker] INFO  Exposed - Extracting primary keys took 176ms
+_2023-12-01 13:59:00.834 [Test worker] INFO  Exposed - Extracting column constraints took 131ms
+b2023-12-01 13:59:00.834 [Test worker] INFO  Exposed - Preparing alter table statements took 412ms
+a2023-12-01 13:59:00.861 [Test worker] INFO  Exposed - Executing alter table statements took 26ms
+^2023-12-01 13:59:01.047 [Test worker] INFO  Exposed - Checking mapping consistence took 185ms

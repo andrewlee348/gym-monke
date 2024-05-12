@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.server.TempTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-01T18:58:59" hostname="v1040-wn-rt-a-106-83.campus-dynamic.uwaterloo.ca" time="1.951">
+  <properties/>
+  <testcase name="test" classname="com.server.TempTests" time="1.951"/>
+  <system-out><![CDATA[2023-12-01 13:59:00.392 [Test worker] INFO  Exposed - Preparing create tables statements took 255ms
+2023-12-01 13:59:00.422 [Test worker] INFO  Exposed - Executing create tables statements took 29ms
+2023-12-01 13:59:00.524 [Test worker] INFO  Exposed - Extracting table columns took 102ms
+2023-12-01 13:59:00.701 [Test worker] INFO  Exposed - Extracting primary keys took 176ms
+2023-12-01 13:59:00.834 [Test worker] INFO  Exposed - Extracting column constraints took 131ms
+2023-12-01 13:59:00.834 [Test worker] INFO  Exposed - Preparing alter table statements took 412ms
+2023-12-01 13:59:00.861 [Test worker] INFO  Exposed - Executing alter table statements took 26ms
+2023-12-01 13:59:01.047 [Test worker] INFO  Exposed - Checking mapping consistence took 185ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

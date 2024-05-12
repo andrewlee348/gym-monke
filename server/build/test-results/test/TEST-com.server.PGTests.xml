@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.server.PGTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-01T18:58:54" hostname="v1040-wn-rt-a-106-83.campus-dynamic.uwaterloo.ca" time="4.352">
+  <properties/>
+  <testcase name="test" classname="com.server.PGTests" time="4.352"/>
+  <system-out><![CDATA[2023-12-01 13:58:56.220 [Test worker] WARN  Exposed - Keyword identifier used: 'Users'. Case sensitivity may not be kept when quoted by default: 'users'. To keep case sensitivity, opt-in and set 'preserveKeywordCasing' to true in DatabaseConfig block.
+2023-12-01 13:58:56.224 [Test worker] INFO  Exposed - Preparing create tables statements took 109ms
+2023-12-01 13:58:56.260 [Test worker] DEBUG Exposed - CREATE TABLE IF NOT EXISTS "users" (userid VARCHAR(100) NOT NULL, username VARCHAR(100) NOT NULL, profilepicurl VARCHAR(100) NOT NULL, friendlist VARCHAR(10000) NOT NULL)
+2023-12-01 13:58:56.318 [Test worker] DEBUG Exposed - ALTER TABLE "users" ADD CONSTRAINT users_userid_unique UNIQUE (userid)
+2023-12-01 13:58:56.361 [Test worker] INFO  Exposed - Executing create tables statements took 137ms
+2023-12-01 13:58:56.507 [Test worker] INFO  Exposed - Extracting table columns took 145ms
+2023-12-01 13:58:56.640 [Test worker] INFO  Exposed - Extracting primary keys took 133ms
+2023-12-01 13:58:56.760 [Test worker] INFO  Exposed - Extracting column constraints took 119ms
+2023-12-01 13:58:56.761 [Test worker] INFO  Exposed - Preparing alter table statements took 399ms
+2023-12-01 13:58:56.788 [Test worker] INFO  Exposed - Executing alter table statements took 27ms
+2023-12-01 13:58:56.981 [Test worker] INFO  Exposed - Checking mapping consistence took 193ms
+2023-12-01 13:58:57.167 [Test worker] WARN  Exposed - Keyword identifier used: 'time'. Case sensitivity may not be kept when quoted by default: 'time'. To keep case sensitivity, opt-in and set 'preserveKeywordCasing' to true in DatabaseConfig block.
+2023-12-01 13:58:57.168 [Test worker] WARN  Exposed - Keyword identifier used: 'comments'. Case sensitivity may not be kept when quoted by default: 'comments'. To keep case sensitivity, opt-in and set 'preserveKeywordCasing' to true in DatabaseConfig block.
+2023-12-01 13:58:57.169 [Test worker] INFO  Exposed - Preparing create tables statements took 187ms
+2023-12-01 13:58:57.206 [Test worker] DEBUG Exposed - CREATE TABLE IF NOT EXISTS posts (userid VARCHAR(100) NOT NULL, username VARCHAR(100) NOT NULL, "time" VARCHAR(50) NOT NULL, caption VARCHAR(1000) NOT NULL, imageurl VARCHAR(100) NOT NULL, "userLikedList" VARCHAR(10000) NOT NULL, banana INT NOT NULL, "comments" VARCHAR(10000) NOT NULL)
+2023-12-01 13:58:57.238 [Test worker] DEBUG Exposed - ALTER TABLE posts ADD CONSTRAINT posts_userid_time_unique UNIQUE (userid, "time")
+2023-12-01 13:58:57.280 [Test worker] INFO  Exposed - Executing create tables statements took 111ms
+2023-12-01 13:58:57.395 [Test worker] INFO  Exposed - Extracting table columns took 114ms
+2023-12-01 13:58:57.466 [Test worker] INFO  Exposed - Extracting primary keys took 71ms
+2023-12-01 13:58:57.688 [Test worker] INFO  Exposed - Extracting column constraints took 221ms
+2023-12-01 13:58:57.689 [Test worker] INFO  Exposed - Preparing alter table statements took 408ms
+2023-12-01 13:58:57.741 [Test worker] INFO  Exposed - Executing alter table statements took 52ms
+2023-12-01 13:58:57.996 [Test worker] INFO  Exposed - Checking mapping consistence took 254ms
+2023-12-01 13:58:58.739 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, 'dabbing on them haters', '[]', 'https://i.imgur.com/J8XIcEl.jpg', '2023-11-17 13:36:54', '[]', '5721', 'Irene')
+2023-12-01 13:58:58.789 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, '⛸️', '[]', 'https://i.imgur.com/HqCzDN2.jpg', '2023-11-17 13:48:35', '[]', '5721', 'Irene')
+2023-12-01 13:58:58.819 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, 'pat pat', '[]', 'https://i.imgur.com/jsVMLxv.jpg', '2023-11-17 13:54:04', '[]', '5721', 'Irene')
+2023-12-01 13:58:58.871 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, 'rawr', '[]', 'https://i.imgur.com/IGzRMEB.jpg', '2023-11-17 13:57:20', '[]', '9507', 'Cathy')
+2023-12-01 13:58:58.901 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, 'bruh', '[]', 'https://i.imgur.com/JhKrxQy.jpg', '2023-11-17 13:58:06', '[]', '9507', 'Cathy')
+2023-12-01 13:58:58.931 [Test worker] DEBUG Exposed - INSERT INTO posts (banana, caption, "comments", imageurl, "time", "userLikedList", userid, username) VALUES (0, 'huhh', '[]', 'https://i.imgur.com/L5RYdo3.png', '2023-11-17 14:04:32', '[]', '9507', 'Cathy')
+2023-12-01 13:58:58.983 [Test worker] DEBUG Exposed - INSERT INTO "users" (friendlist, profilepicurl, userid, username) VALUES ('["5721"]', 'https://i.imgur.com/tqJXoTX.jpg', '9507', 'Cathy')
+2023-12-01 13:58:59.014 [Test worker] DEBUG Exposed - INSERT INTO "users" (friendlist, profilepicurl, userid, username) VALUES ('["9507"]', 'https://i.imgur.com/jsqpRBX.jpg', '5721', 'Irene')
+2023-12-01 13:58:59.046 [Test worker] DEBUG Exposed - INSERT INTO "users" (friendlist, profilepicurl, userid, username) VALUES ('["5721,9507"]', 'https://i.imgur.com/1Fw0PnL.jpg', '2012', 'Andrew')
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

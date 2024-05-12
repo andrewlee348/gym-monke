@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.server.PGDropTables" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-01T18:58:52" hostname="v1040-wn-rt-a-106-83.campus-dynamic.uwaterloo.ca" time="2.076">
+  <properties/>
+  <testcase name="test" classname="com.server.PGDropTables" time="2.076"/>
+  <system-out><![CDATA[2023-12-01 13:58:54.056 [Test worker] DEBUG Exposed - DROP TABLE IF EXISTS "users"
+2023-12-01 13:58:54.089 [Test worker] DEBUG Exposed - DROP TABLE IF EXISTS posts
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

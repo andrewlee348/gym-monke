@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.server.ApplicationTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.server.ApplicationTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.server.html">com.server</a> &gt; ApplicationTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.366s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testRoot</td>
+<td class="success">0.366s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-12-01 13:58:52.445 [Test worker @coroutine#1] TRACE i.ktor.client.plugins.HttpPlainText - Adding Accept-Charset=UTF-8 to http:///
+2023-12-01 13:58:52.476 [DefaultDispatcher-worker-1 @call-context#2] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+2023-12-01 13:58:52.517 [DefaultDispatcher-worker-1 @call-context#2] INFO  ktor.test - Application started in 0.054 seconds.
+2023-12-01 13:58:52.554 [DefaultDispatcher-worker-1 @request#2] TRACE io.ktor.routing.Routing - Trace for []
+/, segment:0 -&gt; SUCCESS @ /
+  /, segment:0 -&gt; SUCCESS @ /
+    /(method:GET), segment:0 -&gt; SUCCESS @ /(method:GET)
+  /get_all_users, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /get_all_users
+  /get_user_friends, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /get_user_friends
+  /get_user_posts, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /get_user_posts
+  /get_user_data, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /get_user_data
+  /get_profile, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /get_profile
+  /get_posts, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /get_posts
+  /banana_post, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /banana_post
+  /delete_post, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /delete_post
+  /add_friend, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /add_friend
+  /remove_friend, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /remove_friend
+  /add_comment, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /add_comment
+  /delete_comment, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /delete_comment
+  /edit_comment, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /edit_comment
+  /get_comments, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /get_comments
+  /like_post, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /like_post
+  /unlike_post, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /unlike_post
+  /edit_post_caption, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /edit_post_caption
+  /post_post, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /post_post
+  /create_user, segment:0 -&gt; FAILURE &quot;Selector didn't match&quot; @ /create_user
+Matched routes:
+  &quot;&quot; -&gt; &quot;&lt;slash&gt;&quot; -&gt; &quot;(method:GET)&quot;
+Route resolve result:
+  SUCCESS @ /(method:GET)
+2023-12-01 13:58:52.568 [Test worker @coroutine#1] TRACE i.k.client.plugins.HttpCallValidator - Validating response for request http://localhost/
+2023-12-01 13:58:52.568 [Test worker @coroutine#1] TRACE i.k.c.p.DefaultResponseValidation - Skipping default response validation for http://localhost/
+2023-12-01 13:58:52.663 [Test worker @coroutine#1] TRACE i.k.c.plugins.defaultTransformers - Transformed with default transformers response body for http://localhost/ to class io.ktor.utils.io.core.ByteReadPacket
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0</a> at Dec 1, 2023, 1:59:01 p.m.</p>
+</div>
+</div>
+</body>
+</html>
